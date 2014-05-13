@@ -1,4 +1,3 @@
-" Can be typed even faster than jj.
 :imap jj <Esc>
 
 colorscheme desert

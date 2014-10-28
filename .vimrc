@@ -1,5 +1,8 @@
 :imap jj <Esc>
 
+" suppress errors if pathogen is not installed
+silent! execute pathogen#infect()
+
 colorscheme desert
 
 set nocompatible
@@ -94,3 +97,5 @@ map ,- :s/^/--/<CR>
 " remove trailing spaces 
 autocmd FileType c,cpp,java,php,python autocmd BufWritePre <buffer> :%s/\\s\\+$//e
 
+" indent xml
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
